@@ -1,3 +1,6 @@
+import emailjs from '@emailjs/browser';
+
+
 function SendMail(){
   var params = {
     from_name: document.getElementById('fullname').value,
@@ -14,3 +17,15 @@ function(){
         publicKey: "sZR_x2Tj0-JssIMWd",
       });
    })();
+import emailjs from '@emailjs/browser';
+
+emailjs.init({
+  publicKey: 'sZR_x2Tj0-JssIMWd',
+  blockHeadless: true,
+  blockList: {
+    list: ['foo@emailjs.com', 'bar@emailjs.com'],
+  },
+  limitRate: {
+    throttle: 10000, // 10s
+  },
+});
