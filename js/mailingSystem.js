@@ -9,3 +9,8 @@ function SendMail(){
     alert("Success! " + res.status);
   })
 }
+function(){
+      emailjs.init({
+        publicKey: "sZR_x2Tj0-JssIMWd",
+      });
+   })();
